@@ -1,6 +1,6 @@
 import { act, renderHook, waitFor } from '@testing-library/react';
 import fetchMock, { enableFetchMocks } from 'jest-fetch-mock';
-import { useFetch, UseFetchOptions } from './index';
+import { useFetch, UseFetchOptions } from '../src';
 enableFetchMocks();
 
 const getProps = <R, T>(
@@ -24,7 +24,7 @@ describe('useFetch', () => {
 
     const props = getProps<typeof expected, { dog: typeof expected }>({
       url: 'https://jsonplaceholder.typicode.com/todos/1',
-      transformResponse: (x) => ({ dog: x }),
+      transformResponse: (x: typeof expected) => ({ dog: x }),
     });
 
     const { result } = renderHook(() => useFetch(props));
@@ -59,7 +59,7 @@ describe('useFetch', () => {
     const props = getProps({
       url: 'https://jsonplaceholder.typicode.com/todos/1',
       lazy: true,
-      transformResponse: (x) => x,
+      transformResponse: (x: typeof expected) => x,
     });
 
     const { result } = renderHook(() => useFetch(props));
@@ -99,7 +99,7 @@ describe('useFetch', () => {
   test('should report errors', async () => {
     const props: Parameters<typeof useFetch>[0] = {
       url: 'https://jsonplaceholder.typicode.com/todos/1',
-      transformResponse: (x) => x,
+      transformResponse: (x: any) => x,
     };
 
     fetchMock.mockRejectOnce(new Error('something'));
