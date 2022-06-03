@@ -1,5 +1,5 @@
-export type UseFetchReturn<Response, TransformedOutput> = {
-  data: TransformedOutput | Response | undefined;
+export type UseFetchReturn<TransformedOutput> = {
+  data: TransformedOutput | undefined;
   loading: boolean;
   error: unknown;
   callFetch?: () => {
