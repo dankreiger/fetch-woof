@@ -1,10 +1,10 @@
 {
-  "name": "usepuppyfetch",
+  "name": "@dankreiger/fetch-woof",
   "version": "1.0.2",
   "license": "MIT",
   "author": "Dan Kreiger",
   "main": "dist/index.js",
-  "module": "dist/usepuppyfetch.esm.js",
+  "module": "dist/fetchwoof.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -59,11 +59,11 @@
   },
   "size-limit": [
     {
-      "path": "dist/usepuppyfetch.cjs.production.min.js",
+      "path": "dist/fetchwoof.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/usepuppyfetch.esm.js",
+      "path": "dist/fetchwoof.esm.js",
       "limit": "10 KB"
     }
   ]
