@@ -34,7 +34,7 @@ export const createFetch = <R, TransformedOutput>(
       return onSuccess(transformResponse(json));
     })(),
   ])
-    .then((winner) => (isTimeout(winner) ? onLoading : sleepInstance.cancel))
+    .then(winner => (isTimeout(winner) ? onLoading : sleepInstance.cancel))
     .catch(
       reportWithAbort({
         onAbort: onDone,
