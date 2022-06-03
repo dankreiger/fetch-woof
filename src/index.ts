@@ -4,9 +4,9 @@ import { createFetch, sleep } from './utils';
 
 export const useFetch = <Response, TransformedOutput>(
   opts: UseFetchOptions<Response, TransformedOutput>
-): UseFetchReturn<Response, TransformedOutput> => {
+): UseFetchReturn<TransformedOutput> => {
   const { url, transformResponse, loadingStateDelay, lazy } = opts;
-  const [data, setData] = useState<TransformedOutput | Response>();
+  const [data, setData] = useState<TransformedOutput>();
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<unknown>();
   const ref = useRef<ReturnType<typeof createFetch>>();
