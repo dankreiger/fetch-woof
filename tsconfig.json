@@ -1,0 +1,25 @@
+
+   
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "es2015",
+    "declarationDir": "./dist/types",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "types": ["node", "jest"],
+    "sourceMap": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "stripInternal": true,
+    "resolveJsonModule": true,
+    "jsx": "react"
+  },
+  "include": ["./src"]
+}

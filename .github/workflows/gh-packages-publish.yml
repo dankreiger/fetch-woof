@@ -1,0 +1,37 @@
+name: Github Packages
+on:
+  release:
+    types: [created]
+jobs:
+  gh_packages:
+    name: 'On Release - Release version GH Packages'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v3
+
+      # Setup .npmrc file to publish to GitHub Packages
+      - name: Setup configuration for GH Packages
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.15.0'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@dankreiger'
+
+      - name: Install deps and build (with cache)
+        uses: bahmutov/npm-install@v1
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test --ci --coverage --maxWorkers=2
+
+      - name: Build
+        run: npm run build
+
+      # Publish to GitHub Packages
+      - run: npm publish
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
