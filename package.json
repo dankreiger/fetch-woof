@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "Dan Kreiger",
   "main": "dist/index.js",
-  "module": "dist/fetchwoof.esm.js",
+  "module": "dist/fetch-woof.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -59,11 +59,11 @@
   },
   "size-limit": [
     {
-      "path": "dist/fetchwoof.cjs.production.min.js",
+      "path": "dist/fetch-woof.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/fetchwoof.esm.js",
+      "path": "dist/fetch-woof.esm.js",
       "limit": "10 KB"
     }
   ]
