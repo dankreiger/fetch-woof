@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/dankreiger/fetch-woof/compare/v1.0.4...v1.0.5) (2022-06-04)
+
+
+### Bug Fixes
+
+* types ([7b8c71a](https://github.com/dankreiger/fetch-woof/commit/7b8c71a3fc1bc853810117a5eb25d810a992a21a))
+
 ## [1.0.4](https://github.com/dankreiger/fetch-woof/compare/v1.0.3...v1.0.4) (2022-06-04)
 
 
