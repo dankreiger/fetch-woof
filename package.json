@@ -15,6 +15,7 @@
     "build": "tsdx build",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
+    "semantic-release": "semantic-release",
     "size": "size-limit",
     "start": "tsdx watch",
     "test": "tsdx test --passWithNoTests"
