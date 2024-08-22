@@ -47,7 +47,7 @@
     "react-dom": "18.2.0",
     "semantic-release": "19.0.5",
     "size-limit": "7.0.8",
-    "sort-package-json": "1.57.0",
+    "sort-package-json": "2.10.1",
     "tsdx": "0.14.1",
     "tslib": "2.4.0",
     "typescript": "4.7.4"
